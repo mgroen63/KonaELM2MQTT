@@ -146,7 +146,7 @@ void checkResponse() {
     // 032220060662200601A497AA - 03 222006 - header, AA - footer
     // 01A497 - value in HEX for Odometer status
     // data for CAN responses from CanZE project in 
-    // https://github.com/fesch/CanZE/tree/master/app/src/main/assets/ZOE
+    // https://github.com/fesch/CanZE/tree/master/app/src/main/assets/Kona
     // example data captured using canZE
     // again big credit to KarelSvo on github
     
@@ -176,7 +176,7 @@ void checkResponse() {
     // response: 22339D0462339D00AAAAAA - no cable
     // response: 0462339D01AAAAAA - with cable
     // Take last 8 chars, remove AAAAAAA, if it includes 01 - we have cable, otherwise not
-    // https://github.com/fesch/CanZE/tree/master/app/src/main/assets/ZOE
+    // https://github.com/fesch/CanZE/tree/master/app/src/main/assets/Kona
     // again big credit to KarelSvo on github
     
     String cablePresence = elmResponse;
