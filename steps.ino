@@ -20,7 +20,7 @@ const char* jsonArray = "[  "
 "      { \"stepID\" : 16, \"send\" : \"AT AT 1\", \"response\" : \"OK>\", \"part\" : 0 }, "
 "      { \"stepID\" : 17, \"send\" : \"AT CRA 7EC\", \"response\" : \"OK>\", \"part\" : 0 }, "
 "      { \"stepID\" : 18, \"send\" : \"AT FC SH 7e4\", \"response\" : \"OK>\", \"part\" : 0 }, "
-"      { \"stepID\" : 19, \"send\" : \"03 222002\", \"response\" : \"05622002\", \"part\" : 1 } "
+"      { \"stepID\" : 19, \"send\" : \"03 220105\", \"response\" : \"05622002\", \"part\" : 1 } "
 "    ] "
 "  } "
 "]";
