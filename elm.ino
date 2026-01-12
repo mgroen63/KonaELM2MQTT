@@ -313,8 +313,8 @@ void handShake() {
       break;
     case 19:
       // this is the actual code for SoC
-      commandToSend = "03 222002";
-      commandResponse = "05622002";
+      commandToSend = "03 220105";
+      commandResponse = "620105";
       commandResponsePart = true;
       break;
 
