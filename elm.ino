@@ -59,7 +59,7 @@ void checkResponse() {
   if ((handShakeStep == 20) && (lastResponseOK == 1)) {
     // we have SoC response, let's process it
     // 056220020FF6AAAA - 05 622002 - header, AAAA - footer
-    // 0FF6 - value in HEX, to be multiplied by 0.02 for %SoC
+    // 0FF6 - value in HEX, to be multiplied by 0.5 for %SoC
     String SoC = elmResponse;
     SoC.replace("05622002", "");
     SoC = SoC.substring(0, 4);
@@ -68,7 +68,7 @@ void checkResponse() {
     char SoCc[5];
     SoC.toCharArray(SoCc, 5);
     SoCl = strtol(SoCc, NULL, 16);
-    float SoCf = 0.02 * SoCl;
+    float SoCf = 0.5 * SoCl;
         
     webSocket.broadcastTXT("SoC: " + String(SoCf, 2));
     snprintf (msg, MSG_BUFFER_SIZE, "%3.2f", SoCf);
