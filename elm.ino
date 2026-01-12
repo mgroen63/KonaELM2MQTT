@@ -318,7 +318,7 @@ void handShake() {
       commandResponsePart = true;
       break;
 
-    // restart sequence for available power
+    // restart sequence for available energy
 
     
     case 201:
@@ -413,8 +413,8 @@ void handShake() {
       commandResponsePart = false;
       break;
     case 219:
-      // this is the actual code for Available Power in kWh
-      commandToSend = "03 22320C";
+      // this is the actual code for Available Energy in kWh
+      commandToSend = "03 22320C";     //220101 for Kona?
       commandResponse = "0562320C";
       commandResponsePart = true;
       break;
@@ -517,7 +517,7 @@ void handShake() {
       break;
     case 119:
       // this is the actual code for Available range in km
-      commandToSend = "03 223451";
+      commandToSend = "03 223451";          //220105 for Kona???
       commandResponse = "05623451";
       commandResponsePart = true;
       break;
@@ -615,7 +615,7 @@ void handShake() {
       commandResponsePart = true;
       break;
     case 318:
-      commandToSend = "03222006";
+      commandToSend = "03222006";        //220106 for Kona???
       commandResponse = "03222006";
       commandResponsePart = true;
       break;
