@@ -1,4 +1,4 @@
-# Zoe ELM2MQTT
+# Kona ELM2MQTT
 Translation tool from ELM bluetooth dongle connected to OBD2 port in the car to MQTT server for HomeAssistant
 
 # Initial steps
@@ -40,50 +40,50 @@ In configuration file, add following section:
 ```
 mqtt:
   sensor:
-    - name: "Zoe - State of Charge"
+    - name: "Kona - State of Charge"
       state_topic: "elm327report/result/SoC"
-      unique_id: "zoe.SoC"
+      unique_id: "Kona.SoC"
       unit_of_measurement: "%"
       icon: |-
-        {% if states("zoe.SoC") | float > 80 %}
+        {% if states("Kona.SoC") | float > 80 %}
         mdi:battery-80
         {% else %}
         mdi:battery-10
         {% end if %}
       
-    - name: "Zoe - Available range"
+    - name: "Kona - Available range"
       state_topic: "elm327report/result/AvailableRange"
       icon: mdi:gauge-low
       unit_of_measurement: "km"
-      unique_id: "zoe.Range"
+      unique_id: "Kona.Range"
       
-    - name: "Zoe - Available Energy"
+    - name: "Kona - Available Energy"
       state_topic: "elm327report/result/AvailableEnergy"
       icon: mdi:lightning-bolt
       unit_of_measurement: "kWh"
-      unique_id: "zoe.Energy"
+      unique_id: "Kona.Energy"
       
-    - name: "Zoe - Dongle status"
+    - name: "Kona - Dongle status"
       state_topic: "elm327report/status"
-      unique_id: "zoe.DongleState"
+      unique_id: "Kona.DongleState"
       
-    - name: "Zoe - Debug - message sent"
+    - name: "Kona - Debug - message sent"
       state_topic: "elm327report/debug/elmSend"
-      unique_id: "zoe.ElmSend"
+      unique_id: "Kona.ElmSend"
       
-    - name: "Zoe - Debug - message received"
+    - name: "Kona - Debug - message received"
       state_topic: "elm327report/debug/elmResponse"
       
-    - name: "Zoe - Debug - ODB connection status"
+    - name: "Kona - Debug - ODB connection status"
       state_topic: "elm327report/heartbeat"
-      unique_id: "zoe.ElmHeartbeat"
+      unique_id: "Kona.ElmHeartbeat"
 
-    - name: "Zoe - Odometer"
+    - name: "Kona - Odometer"
       state_topic: "elm327report/result/Odometer"
       icon: mdi:lightning-bolt
       unit_of_measurement: "km"
       state_class: total
-      unique_id: "zoe.Odometer"
+      unique_id: "Kona.Odometer"
 
 ```
 
